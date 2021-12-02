@@ -1,7 +1,7 @@
 name: Report Broken Companies / Hiring / Fake Job Posts
 description: Report a company with broken hiring process or fake job posts
 title: '[0001]: '
-projects:
+labels:
   - 0001 Broken Companies Hiring
 assignees:
   - rrjanbiah
