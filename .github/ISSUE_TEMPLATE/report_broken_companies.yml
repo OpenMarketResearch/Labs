@@ -1,7 +1,8 @@
 name: Report Broken Companies / Hiring / Fake Job Posts
 description: Report a company with broken hiring process or fake job posts
-title: "[0001]: "
-labels: ["0001 Broken Companies Hiring"]
+title: '[0001]: '
+labels:
+  - 0001 Broken Companies Hiring
 assignees:
   - rrjanbiah
 body:
@@ -22,7 +23,7 @@ body:
     attributes:
       label: Company Website
       description: What is the company website/URL?
-      placeholder: https://example.com/
+      placeholder: 'https://example.com/'
     validations:
       required: true
   - type: input
@@ -30,15 +31,15 @@ body:
     attributes:
       label: Related job posting
       description: What is the URL of the job description?
-      placeholder: https://example.com/job-posting
+      placeholder: 'https://example.com/job-posting'
     validations:
       required: false
   - type: input
     id: job_role
     attributes:
       label: Applied/checked job role
-      description: What is the job role? Or, at least share related nearest job role
-      placeholder: Engineering Manager, etc
+      description: 'What is the job role? Or, at least share related nearest job role'
+      placeholder: 'Engineering Manager, etc'
     validations:
       required: false
   - type: checkboxes
@@ -60,24 +61,24 @@ body:
         - label: Data mining
         - label: Racism
         - label: Sexism
-        - label: Fake job post for backlinks such as Ask HN Who is hiring
+        - label: Fake job post for backlinks, such as ```Ask HN Who is hiring```
         - label: Other
   - type: textarea
     id: experience
     attributes:
       label: What happened?
       description: Please explain your experience
-      placeholder: 
-      value: 
+      placeholder: null
+      value: null
     validations:
       required: false
     render: yaml
-- type: textarea
+  - type: textarea
     id: suggestion
     attributes:
       label: Suggestion for the community
       description: Please share your suggestion for the community members
-      placeholder: 
-      value: 
+      placeholder: null
+      value: null
     validations:
       required: false
