@@ -1,62 +1,83 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
-labels: ["bug", "triage"]
+name: Report Broken Companies / Hiring / Fake Job Posts
+description: Report a company with broken hiring process or fake job posts
+title: "[0001]: "
+labels: ["0001 Broken Companies Hiring"]
 assignees:
-  - octocat
+  - rrjanbiah
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        Thanks for taking the time to report for the community benefit!
   - type: input
-    id: contact
+    id: company_name
     attributes:
-      label: Contact Details
-      description: How can we get in touch with you if we need more info?
-      placeholder: ex. email@example.com
+      label: Company Name
+      description: What is the company name?
+      placeholder: Company Name
+    validations:
+      required: true
+  - type: input
+    id: company_url
+    attributes:
+      label: Company Website
+      description: What is the company website/URL?
+      placeholder: https://example.com/
+    validations:
+      required: true
+  - type: input
+    id: job_url
+    attributes:
+      label: Related job posting
+      description: What is the URL of the job description?
+      placeholder: https://example.com/job-posting
     validations:
       required: false
+  - type: input
+    id: job_role
+    attributes:
+      label: Applied/checked job role
+      description: What is the job role? Or, at least share related nearest job role
+      placeholder: Engineering Manager, etc
+    validations:
+      required: false
+  - type: checkboxes
+	  id: broken_items
+	  attributes:
+    	label: What are broken?
+    	description: You may select more than one.
+	    options:
+    	  - label: Whiteboard
+    	  - label: Puzzles and leetcodes
+    	  - label: Algorithms and irrelevance
+    	  - label: Too many rounds
+    	  - label: Free tasks / assignments
+    	  - label: Weird NDA
+    	  - label: Ethical issues
+    	  - label: Ghosting
+    	  - label: HR round
+    	  - label: Technical round
+    	  - label: Data mining
+    	  - label: Racism
+    	  - label: Sexism
+    	  - label: Fake job post for backlinks (such as "Ask HN: Who is hiring?")
+    	  - label: Other
   - type: textarea
-    id: what-happened
+    id: experience
     attributes:
       label: What happened?
-      description: Also tell us, what did you expect to happen?
-      placeholder: Tell us what you see!
-      value: "A bug happened!"
+      description: Please explain your experience
+      placeholder: 
+      value: 
     validations:
-      required: true
-  - type: dropdown
-    id: version
+      required: false
+    render: yaml
+- type: textarea
+    id: suggestion
     attributes:
-      label: Version
-      description: What version of our software are you running?
-      options:
-        - 1.0.2 (Default)
-        - 1.0.3 (Edge)
+      label: Suggestion for the community
+      description: Please share your suggestion for the community members
+      placeholder: 
+      value: 
     validations:
-      required: true
-  - type: dropdown
-    id: browsers
-    attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: true
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-  - type: textarea
-    id: logs
-    attributes:
-      label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
-      render: shell
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+      required: false
