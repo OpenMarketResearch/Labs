@@ -60,7 +60,7 @@ body:
         - label: Data mining
         - label: Racism
         - label: Sexism
-        - label: Fake job post for backlinks, such as ```Ask HN: Who is hiring?```
+        - label: Fake job post for backlinks such as Ask HN Who is hiring
         - label: Other
   - type: textarea
     id: experience
