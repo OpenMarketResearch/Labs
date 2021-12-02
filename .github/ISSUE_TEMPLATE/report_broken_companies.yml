@@ -72,7 +72,6 @@ body:
       value: null
     validations:
       required: false
-    render: yaml
   - type: textarea
     id: suggestion
     attributes:
